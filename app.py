@@ -14,6 +14,8 @@ if st.button("Run Simulation"):
     df = pd.DataFrame()
     df["Nothing"] = [1,2,3]
 
+    st.markdown("Don't make me dissapear :(")
+
     def getdata(df):
         return df.to_csv(index=False).encode('utf-8')
 
