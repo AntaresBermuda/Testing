@@ -8,6 +8,8 @@ import seaborn as sns
 from dateutil.relativedelta import relativedelta
 import time
 
+
+
 slid = st.slider("slide me", min_value=0, max_value=10)
 
 if st.button("Run Simulation"):
@@ -20,5 +22,7 @@ if st.button("Run Simulation"):
     def getdata(df):
         return df.to_csv(index=False).encode('utf-8')
 
-    st.download_button('Download Simulation', data=getdata(df), file_name='Simulation.csv')
+    if st.download_button('Download Simulation', data=getdata(df), file_name='Simulation.csv'):
+        st.markdown("????")
+
 
