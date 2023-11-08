@@ -9,33 +9,35 @@ from dateutil.relativedelta import relativedelta
 import time
 
 
-@st.cache(show_spinner=False)
-def generate_download_link():
-    # Code to generate the file you want to download
-    # This function will only be executed once, and the output will be cached
+if st.button("Run Simulation"):
 
-    # Replace the following code with your own logic to generate the file
-    file_contents = "Hello, this is the file content!"
+    @st.cache(show_spinner=False)
+    def generate_download_link():
+        # Code to generate the file you want to download
+        # This function will only be executed once, and the output will be cached
 
-    return file_contents
+        # Replace the following code with your own logic to generate the file
+        file_contents = "Hello, this is the file content!"
 
-def main():
-    # Generate the download link
-    file_contents = generate_download_link()
+        return file_contents
 
-    # Create a download button using st.download_button
-    if st.button("Download File"):
-        # When the button is clicked, download the file
-        # You can specify the file name and content type
-        st.download_button(
-            label="Click here to download",
-            data=file_contents,
-            file_name="file.txt",
-            mime="text/plain"
-        )
+    def main():
+        # Generate the download link
+        file_contents = generate_download_link()
 
-if __name__ == "__main__":
-    main()
+        # Create a download button using st.download_button
+        if st.button("Download File"):
+            # When the button is clicked, download the file
+            # You can specify the file name and content type
+            st.download_button(
+                label="Click here to download",
+                data=file_contents,
+                file_name="file.txt",
+                mime="text/plain"
+            )
+
+    if __name__ == "__main__":
+        main()
 
 
 '''
