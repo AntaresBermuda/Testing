@@ -10,6 +10,9 @@ import time
 
 
 if st.button("Run Simulation"):
-    
+
+    df = pd.DataFrame()
+    df["Nothing"] = [1,2,3]
+
     st.download_button('Download Simulation', data=getdata(), file_name='Simulation.csv')
 
