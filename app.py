@@ -8,6 +8,7 @@ import seaborn as sns
 from dateutil.relativedelta import relativedelta
 import time
 
+slid = st.slider("slide me", min_value=0, max_value=10)
 
 if st.button("Run Simulation"):
 
