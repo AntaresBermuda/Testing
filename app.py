@@ -14,5 +14,8 @@ if st.button("Run Simulation"):
     df = pd.DataFrame()
     df["Nothing"] = [1,2,3]
 
-    st.download_button('Download Simulation', data=df, file_name='Simulation.csv')
+    def getdata(df):
+        return df.to_csv(index=False).encode('utf-8')
+
+    st.download_button('Download Simulation', data=getdata(df), file_name='Simulation.csv')
 
