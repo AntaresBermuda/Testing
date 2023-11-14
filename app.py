@@ -68,7 +68,7 @@ if option2=="LogNormal":
 
 if option2=="Normal":
     Mean2 = st.number_input("What is the Expected Severity:  $E[X]$?", min_value=0.01)
-    Variance2 = st.number_input("What is the Variance of the Severity:  $Var[X]$?", min_value=0.01)
+    Variance2 = st.number_input("What is the Variance of the Severity:  $Var(X)$?", min_value=0.01)
 
     st.markdown("**<u>Your selected Severity distribution is:</u>**", unsafe_allow_html=True)
     st.latex(r''' f_X(x) = \frac{1}{\sigma \sqrt{2\pi}}  \exp\left[ {\frac{-1}{2}} \left( \frac{x-\mu}{\sigma}    \right )^2  \right] \ \ , \ \ \ x \geq 0 ''')
@@ -76,7 +76,7 @@ if option2=="Normal":
 
 if option2=="Pareto":
     Mean2 = st.number_input("What is the Expected Severity:  $E[X]$?", min_value=0.01)
-    Variance2 = st.number_input("What is the Variance of the Severity:  $Var[X]$?", min_value=0.01)
+    Variance2 = st.number_input("What is the Variance of the Severity:  $Var(X)$?", min_value=0.01)
 
     st.markdown("**<u>Your selected Severity distribution is:</u>**", unsafe_allow_html=True)
     st.latex(r''' f_X(x) = \frac{\alpha \ m^\alpha}{x^{\alpha+1}}''')
@@ -86,7 +86,7 @@ if option2=="Pareto":
 
 if option2=="Gamma":
     Mean2 = st.number_input("What is the Expected Severity:  $E[X]$?", min_value=0.01)
-    Variance2 = st.number_input("What is the Variance of the Severity:  $Var[X]$?", min_value=0.01)
+    Variance2 = st.number_input("What is the Variance of the Severity:  $Var(X)$?", min_value=0.01)
 
     st.markdown("**<u>Your selected Severity distribution is:</u>**", unsafe_allow_html=True)
     st.latex(r''' f_X(x) = \frac{x^{\alpha-1} \ e^{-x/\theta}}{\theta^\alpha \ (\alpha-1)!} ''')
